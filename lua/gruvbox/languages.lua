@@ -1,6 +1,5 @@
 -- language specific higlights
 local base = require("gruvbox.base")
-local utils = require("gruvbox.utils")
 local colors = require("gruvbox.colors")
 
 -- xml
@@ -170,16 +169,4 @@ local html = {
   htmlItalic = { fg = colors.fg0, bg = colors.bg0, bold = vim.g.gruvbox_italic },
 }
 
-local langs = utils.merge({
-  xml,
-  purescript,
-  coffeescript,
-  objc,
-  moonscript,
-  elixir,
-  markdown,
-  haskell,
-  html,
-})
-
-return langs
+return vim.tbl_extend("force", xml, purescript, coffeescript, objc, moonscript, elixir, markdown, haskell, html)

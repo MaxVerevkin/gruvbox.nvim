@@ -17,17 +17,6 @@ M.get_color_from_var = function(color, default, colors)
   return c
 end
 
-M.merge = function(tbls)
-  local source = {}
-  for _, group in pairs(tbls) do
-    for groupName, opts in pairs(group) do
-      source[groupName] = opts
-    end
-  end
-
-  return source
-end
-
 M.add_highlights = function(hls)
   for group, settings in pairs(hls) do
     -- https://github.com/akinsho/bufferline.nvim/issues/386#issuecomment-1103849289

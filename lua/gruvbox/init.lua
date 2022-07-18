@@ -1,13 +1,8 @@
-local base = require("gruvbox.base")
-local plugins = require("gruvbox.plugins")
-local languages = require("gruvbox.languages")
 local utils = require("gruvbox.utils")
 
-local specs = { base, languages, plugins }
-local spec = utils.merge(specs)
-
 local M = {}
-M.load = function()
+
+function M.load()
   if vim.version().minor < 7 then
     vim.api.nvim_err_writeln("gruvbox.nvim: you must use neovim 0.7 or higher")
     return
@@ -21,7 +16,10 @@ M.load = function()
 
   vim.g.colors_name = "gruvbox"
   vim.o.termguicolors = true
-  utils.add_highlights(spec)
+
+  utils.add_highlights(require("gruvbox.base"))
+  utils.add_highlights(require("gruvbox.plugins"))
+  utils.add_highlights(require("gruvbox.languages"))
 end
 
 return M
