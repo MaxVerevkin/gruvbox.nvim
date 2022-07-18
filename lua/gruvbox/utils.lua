@@ -1,6 +1,5 @@
 -- util functions
 local M = {}
-local hl = vim.api.nvim_set_hl
 
 -- check if vim.g.gruvbox_* color exists in current palette, return default color
 -- otherwise
@@ -19,12 +18,7 @@ end
 
 M.add_highlights = function(hls)
   for group, settings in pairs(hls) do
-    -- https://github.com/akinsho/bufferline.nvim/issues/386#issuecomment-1103849289
-    if group == "Normal" then
-      vim.cmd(string.format("hi! Normal guifg=%s guibg=%s", settings.fg, settings.bg))
-    else
-      hl(0, group, settings)
-    end
+    vim.api.nvim_set_hl(0, group, settings)
   end
 end
 
