@@ -106,7 +106,6 @@ local number_column = utils.get_color_from_var(vim.g.gruvbox_number_column, nil,
 local color_column = utils.get_color_from_var(vim.g.gruvbox_color_column, bg1, colors)
 local vert_split = utils.get_color_from_var(vim.g.gruvbox_vert_split, bg0, colors)
 local tabline_sel = utils.get_color_from_var(vim.g.gruvbox_tabline_sel, green, colors)
-local sign_column = utils.get_color_from_var(vim.g.gruvbox_sign_column, bg1, colors)
 local cursor_line = utils.get_color_from_var(vim.g.gruvbox_cursor_line, bg1, colors)
 
 local improved_strings_fg = fg1
@@ -168,13 +167,13 @@ local base_group = {
   GruvboxOrange = { fg = orange },
   GruvboxOrangeBold = { fg = orange, bold = vim.g.gruvbox_bold },
 
-  GruvboxRedSign = { fg = red, bg = sign_column, reverse = vim.g.gruvbox_invert_signs },
-  GruvboxGreenSign = { fg = green, bg = sign_column, reverse = vim.g.gruvbox_invert_signs },
-  GruvboxYellowSign = { fg = yellow, bg = sign_column, reverse = vim.g.gruvbox_invert_signs },
-  GruvboxBlueSign = { fg = blue, bg = sign_column, reverse = vim.g.gruvbox_invert_signs },
-  GruvboxPurpleSign = { fg = purple, bg = sign_column, reverse = vim.g.gruvbox_invert_signs },
-  GruvboxAquaSign = { fg = aqua, bg = sign_column, reverse = vim.g.gruvbox_invert_signs },
-  GruvboxOrangeSign = { fg = orange, bg = sign_column, reverse = vim.g.gruvbox_invert_signs },
+  GruvboxRedSign = { fg = red, bg = bg0, reverse = vim.g.gruvbox_invert_signs },
+  GruvboxGreenSign = { fg = green, bg = bg0, reverse = vim.g.gruvbox_invert_signs },
+  GruvboxYellowSign = { fg = yellow, bg = bg0, reverse = vim.g.gruvbox_invert_signs },
+  GruvboxBlueSign = { fg = blue, bg = bg0, reverse = vim.g.gruvbox_invert_signs },
+  GruvboxPurpleSign = { fg = purple, bg = bg0, reverse = vim.g.gruvbox_invert_signs },
+  GruvboxAquaSign = { fg = aqua, bg = bg0, reverse = vim.g.gruvbox_invert_signs },
+  GruvboxOrangeSign = { fg = orange, bg = bg0, reverse = vim.g.gruvbox_invert_signs },
 
   GruvboxRedUnderline = { undercurl = vim.g.gruvbox_undercurl, sp = red },
   GruvboxGreenUnderline = { undercurl = vim.g.gruvbox_undercurl, sp = green },
@@ -202,7 +201,7 @@ local base_group = {
   VertSplit = { fg = bg3, bg = vert_split },
   Folded = { fg = gray, bg = bg1, italic = vim.g.gruvbox_italic },
   FoldColumn = { fg = gray, bg = bg1 },
-  SignColumn = { bg = sign_column },
+  SignColumn = { bg = bg0 },
   IncSearch = { fg = hls_cursor, bg = bg0, reverse = vim.g.gruvbox_inverse },
   LineNr = { fg = bg4, bg = number_column },
   CursorLineNr = { fg = yellow, bg = bg1 },
