@@ -10,7 +10,6 @@ local settings = {
   undercurl = true,
   underline = true,
   inverse = true,
-  improved_strings = false,
   improved_warnings = false,
   invert_signs = false,
   invert_selection = false,
@@ -107,18 +106,6 @@ local color_column = utils.get_color_from_var(vim.g.gruvbox_color_column, bg1, c
 local vert_split = utils.get_color_from_var(vim.g.gruvbox_vert_split, bg0, colors)
 local tabline_sel = utils.get_color_from_var(vim.g.gruvbox_tabline_sel, green, colors)
 local cursor_line = utils.get_color_from_var(vim.g.gruvbox_cursor_line, bg1, colors)
-
-local improved_strings_fg = fg1
-local improved_strings_bg = bg1
-
-local special_string_fg = orange
-local special_string_bg = bg1
-
-if not vim.g.gruvbox_improved_strings then
-  improved_strings_fg = green
-  improved_strings_bg = nil
-  special_string_bg = nil
-end
 
 -- neovim terminal mode colors
 vim.g.terminal_color_0 = bg0
@@ -238,12 +225,8 @@ local base_group = {
   WarningMsg = { link = "GruvboxRedBold" },
   WildMenu = { fg = blue, bg = bg2, bold = vim.g.gruvbox_bold },
   Constant = { link = "GruvboxPurple" },
-  Special = { fg = special_string_fg, bg = special_string_bg, italic = vim.g.gruvbox_improved_strings },
-  String = {
-    fg = improved_strings_fg,
-    bg = improved_strings_bg,
-    italic = vim.g.gruvbox_italicize_strings,
-  },
+  Special = { fg = orange },
+  String = { fg = green },
   Character = { link = "GruvboxPurple" },
   Number = { link = "GruvboxPurple" },
   Boolean = { link = "GruvboxPurple" },
