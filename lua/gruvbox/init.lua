@@ -19,7 +19,6 @@ function M.load()
 
   utils.add_highlights(require("gruvbox.base"))
   utils.add_highlights(require("gruvbox.plugins"))
-  utils.add_highlights(require("gruvbox.languages"))
 end
 
 return M
