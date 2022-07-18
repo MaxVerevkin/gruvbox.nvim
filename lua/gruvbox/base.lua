@@ -184,7 +184,7 @@ local base_group = {
   DiffChange = { fg = aqua, bg = bg0, reverse = vim.g.gruvbox_inverse },
   DiffDelete = { fg = red, bg = bg0, reverse = vim.g.gruvbox_inverse },
   DiffText = { fg = yellow, bg = bg0, reverse = vim.g.gruvbox_inverse },
-  ErrorMsg = { fg = bg0, bg = red, bold = vim.g.gruvbox_bold },
+  ErrorMsg = { fg = red, bg = bg0, bold = vim.g.gruvbox_bold },
   VertSplit = { fg = bg3, bg = vert_split },
   Folded = { fg = gray, bg = bg1, italic = vim.g.gruvbox_italic },
   FoldColumn = { fg = gray, bg = bg1 },
