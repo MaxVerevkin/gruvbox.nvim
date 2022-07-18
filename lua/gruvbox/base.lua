@@ -211,7 +211,7 @@ local base_group = {
   MoreMsg = { link = "GruvboxYellowBold" },
   NonText = { link = "GruvboxBg2" },
   Normal = { fg = fg1, bg = bg0 },
-  Pmenu = { fg = fg1, bg = bg2 },
+  Pmenu = { fg = fg1, bg = bg0 },
   PmenuSel = { fg = bg2, bg = blue, bold = vim.g.gruvbox_bold },
   PmenuSbar = { bg = bg2 },
   PmenuThumb = { bg = bg4 },

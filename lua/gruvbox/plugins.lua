@@ -56,7 +56,7 @@ local plugins = {
   TSException = base.Exception,
   TSType = base.Type,
   TSTypeBuiltin = base.Type,
-  TSInclude = base.Include,
+  TSInclude = base.Keyword,
   TSVariableBuiltin = base.Special,
   TSText = { link = "TSNone" },
   TSStrong = { bold = vim.g.gruvbox_bold },
@@ -237,9 +237,9 @@ local plugins = {
   CmpItemMenu = base.GruvboxGray,
   -- LSP
   LspCodeLens = base.GruvboxGray,
-  LspReferenceRead = { bg = base.GruvboxBg2.fg, underline = vim.g.gruvbox_underline },
-  LspReferenceText = { bg = base.GruvboxBg2.fg, underline = vim.g.gruvbox_underline },
-  LspReferenceWrite = { bg = base.GruvboxBg2.fg, underline = vim.g.gruvbox_underline },
+  LspReferenceRead = { underline = vim.g.gruvbox_underline },
+  LspReferenceText = { underline = vim.g.gruvbox_underline },
+  LspReferenceWrite = { underline = vim.g.gruvbox_underline },
   -- Diagnostic
   DiagnosticError = base.GruvboxRed,
   DiagnosticSignError = base.GruvboxRedSign,
